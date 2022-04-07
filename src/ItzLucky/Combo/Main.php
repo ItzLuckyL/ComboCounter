@@ -28,7 +28,7 @@ class Main extends PluginBase implements Listener {
   public $combo = [];
   private static $instance;
   
-  public function onEnable(){
+  public function onEnable() : void{
     self::$instance = $this;
     $this->getServer()->getPluginManager()->registerEvents($this, $this); 
     $this->getScheduler()->scheduleRepeatingTask(new ComboTask, 1);
