@@ -31,7 +31,7 @@ class Main extends PluginBase implements Listener {
   public function onEnable(){
     self::$instance = $this;
     $this->getServer()->getPluginManager()->registerEvents($this, $this); 
-    $this->getScheduler()->scheduleRepeatingTask(new ComboCounterTask, 1);
+    $this->getScheduler()->scheduleRepeatingTask(new ComboTask, 1);
   }
   
   public function onDamage(EntityDamageEvent $ev){
